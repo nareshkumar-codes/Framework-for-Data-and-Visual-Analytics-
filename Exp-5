@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("/content/original_dataset.csv") # Replace with your file
+df.head()
+
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+plt.plot(x, y, color='blue', label='Sine Wave')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Line Plot')
+plt.legend()
+plt.show()
+
+categories = ['A', 'B', 'C', 'D']
+values = [3, 7, 5, 4]
+plt.bar(categories, values, color='orange')
+plt.xlabel('Category')
+plt.ylabel('Values')
+plt.title('Bar Plot')
+plt.show()
+
+
+data = np.random.randn(1000)
+plt.hist(data, bins=20, color='purple', edgecolor='black')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Histogram')
+plt.show()
